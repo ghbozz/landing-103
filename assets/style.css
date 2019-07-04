@@ -85,7 +85,7 @@ body {
   width: 100vw;
   background-image: url('./images/banner.jpg');
   background-size: cover;
-  background-position: right;
+  background-position: right -300px bottom 0px;
 }
 
 .banner-content {
@@ -109,6 +109,36 @@ body {
 .break {
   color: white;
   border: 1px solid white;
+}
+
+.games-section {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: rgb(237, 238, 242);
+}
+
+.games-section h1 {
+  margin-bottom: 40px;
+}
+
+.game-card {
+  width: 400px;
+  height: 270px;
+  /*box-shadow: 0px 10px 10px rgba(20, 20, 20, 0.3);*/
+}
+
+.top-card {
+  width: 100%;
+  height: 80%;
+  background-color: white;
+}
+
+.bottom-card {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(9, 72, 135);
 }
 
 .btn-main {
