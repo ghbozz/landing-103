@@ -208,3 +208,9 @@ body {
   background-color: white;
   text-decoration: none;
 }
+
+/*BOOTSTRAP*/
+
+.col-sm {
+  padding: 10px !important;
+}
