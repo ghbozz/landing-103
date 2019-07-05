@@ -153,6 +153,7 @@ body {
   height: 76.5%;
   background-color: white;
   overflow: hidden;
+  padding: 0px 25px;
 }
 
 .top-card::before {
@@ -162,7 +163,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 51%;
-  left: 49.6%;
+  left: 53%;
   height: 40px;
   width: 40px;
   color: white;
@@ -177,10 +178,10 @@ body {
   content: "";
   position: absolute;
   top: -10px;
-  left: 49%;
+  left: 52.5%;
   border: 1px solid rgba(237, 238, 242, 0.7);
   height: 110%;
-  transform: rotate(20deg);
+  transform: rotate(25deg);
 }
 
 .bottom-card {
@@ -199,13 +200,39 @@ body {
 }
 
 .home-team {
-  padding-left: 10px;
-  padding-bottom: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .away-team {
-  padding-right: 10px;
-  padding-bottom: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-team-name {
+  text-align: center;
+}
+
+.away-team-name {
+  text-align: center;
+}
+
+#home-img {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+#away-img {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
 }
 
 .btn-main {

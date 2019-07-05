@@ -1,3 +1,7 @@
+const teamsLogo = new Map
+teamsLogo.set('Nîmes Olympique', "./assets/images/teams_logo/nime.svg");
+teamsLogo.set('Stade Rennais FC 1901', "./assets/images/teams_logo/srfc.png");
+teamsLogo.set('Toulouse FC', "./assets/images/teams_logo/tfc.svg");
 
 const myInit = {
   headers: { 'X-Auth-Token': 'KEY' },
@@ -11,6 +15,12 @@ const fetchGames = () => {
     .then(data => buildCards(data))
 }
 
+// const fetchTeam = (id) => {
+//   fetch(`https://api.football-data.org//v2/teams/${id}`, myInit)
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+// }
+
 const buildCards = (data) => {
   const results = new Array
   data.matches.forEach((match) => {
@@ -22,13 +32,29 @@ const buildCards = (data) => {
 }
 
 const buildCard = (match) => {
-  console.log(match)
+  let homeImg = ''
+  let awayImg = ''
+  if (match.awayTeam.name != "Paris Saint-Germain FC") {
+    homeImg = './assets/images/logo.png'
+    awayImg = teamsLogo.get(match.awayTeam.name)
+  } else {
+    homeImg = teamsLogo.get(match.homeTeam.name)
+    awayImg = './assets/images/logo.png'
+  }
   return `
     <div class="col-sm">
       <div class="game-card">
         <div class="top-card">
-          <span class="home-team">${match.homeTeam.name}</span>
-          <span class="away-team">${match.awayTeam.name}</span>
+
+            <div class="home-team">
+              <img id="home-img" src=${homeImg} alt="">
+              <span class="home-team-name">${match.homeTeam.name}</span>
+            </div>
+            <div class="away-team">
+              <img id="away-img" src=${awayImg} alt="">
+              <span class="away-team-name">${match.awayTeam.name}</span>
+            </div>
+
         </div>
         <div class="bottom-card">
           <span class="date">Thu, Jul 28 - 12:30 AM</span>
