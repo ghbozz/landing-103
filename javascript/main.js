@@ -4,7 +4,7 @@ teamsLogo.set('Stade Rennais FC 1901', "./assets/images/teams_logo/srfc.png");
 teamsLogo.set('Toulouse FC', "./assets/images/teams_logo/tfc.svg");
 
 const myInit = {
-  headers: { 'X-Auth-Token': 'KEY' },
+  headers: { 'X-Auth-Token': 'key' },
   dataType: 'json',
   type: 'GET',
 }
@@ -61,6 +61,7 @@ const buildCard = (match) => {
           <span class="date">Thu, Jul 28 - 12:30 AM</span>
           <span class="buy">Buy Tickets</span>
           <span class="game-center">Game Center</span>
+          <div class="gradient"></div>
         </div>
       </div>
     </div>

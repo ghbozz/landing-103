@@ -25,13 +25,13 @@ body {
 }
 
 .gradient {
-  opacity: 0.125;
+  opacity: 0.15;
   z-index: 1;
   position: absolute;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 80%);
+  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 90%);
   height: 200%;
   width: 100%;
   background-blend-mode: multiply;
@@ -163,7 +163,7 @@ body {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
-  left: 50%;
+  left: 50.25%;
   height: 40px;
   width: 40px;
   color: white;
@@ -181,10 +181,11 @@ body {
   left: 50%;
   border: 1px solid rgba(237, 238, 242, 0.7);
   height: 110%;
-  /*transform: rotate(25deg);*/
+  transform: rotate(12.5deg);
 }
 
 .bottom-card {
+  position: relative;
   padding: 15px;
   display: flex;
   align-items: center;
@@ -261,4 +262,53 @@ body {
 
 .col-sm {
   padding: 10px !important;
+}
+
+/*LOADER*/
+
+.loader {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 2px solid rgb(9, 72, 135);
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  position: relative;
+  animation: spin 3s linear infinite forwards;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border-top: 2px solid inherit;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.loader::before {
+  top: 7px;
+  left: 7px;
+  width: 178px;
+  height: 178px;
+  border-top: 2px solid rgb(238, 66, 72);
+  animation: spin 2s linear infinite forwards;
+}
+
+.loader::after {
+  top: 16px;
+  left: 16px;
+  width: 160px;
+  height: 160px;
+  border-top: 2px solid rgb(9, 72, 135);
+  animation: spin 1s linear infinite forwards;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
