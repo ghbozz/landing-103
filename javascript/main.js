@@ -32,6 +32,7 @@ const buildCards = (data) => {
 }
 
 const buildCard = (match) => {
+  // fetchTeam(match.homeTeam.id)
   let homeImg = ''
   let awayImg = ''
   if (match.awayTeam.name != "Paris Saint-Germain FC") {
@@ -48,11 +49,11 @@ const buildCard = (match) => {
 
             <div class="home-team">
               <img id="home-img" src=${homeImg} alt="">
-              <span class="home-team-name">${match.homeTeam.name}</span>
+              <span class="home-team-name">${match.homeTeam.name.split('FC')[0]}</span>
             </div>
             <div class="away-team">
               <img id="away-img" src=${awayImg} alt="">
-              <span class="away-team-name">${match.awayTeam.name}</span>
+              <span class="away-team-name">${match.awayTeam.name.split('FC')[0]}</span>
             </div>
 
         </div>
