@@ -79,6 +79,7 @@ body {
 }
 
 .banner {
+  position: relative;
   display: flex;
   align-items: center;
   height: calc(100vh - 80px);
@@ -86,10 +87,20 @@ body {
   background-image: url('./images/banner.jpg');
   background-size: cover;
   background-position: right -300px bottom 0px;
+  overflow: hidden;
+}
+
+.banner::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  border-right: 2px solid rgba(230, 230, 230 , 0.6);
+  left: 17.7%;
 }
 
 .banner-content {
-  padding-right: 70%;
+  padding-right: 60%;
+  padding-left: 5%;
 }
 
 .title {

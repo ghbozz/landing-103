@@ -4,7 +4,7 @@ teamsLogo.set('Stade Rennais FC 1901', "./assets/images/teams_logo/srfc.png");
 teamsLogo.set('Toulouse FC', "./assets/images/teams_logo/tfc.svg");
 
 const myInit = {
-  headers: { 'X-Auth-Token': 'key' },
+  headers: { 'X-Auth-Token': 'api_key' },
   dataType: 'json',
   type: 'GET',
 }
